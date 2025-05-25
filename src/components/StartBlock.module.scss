@@ -1,8 +1,161 @@
-@use '../styles/variables' as *;
+@use '../styles/variables' as v;
 @use 'sass:map';
 
-.contanier{
-    display: flex;
+.combinedContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.serviceBlock {
+  width: 100%;  
+  display: flex;
+  background: map.get(v.$colors, 'dark-bg') url('../assets/icons/pattern.svg');
+  flex-direction: row;
+  border-radius: 24px;
+  padding: 56px;
+  gap: 100px;
+  justify-content: baseline;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 40pt;
+  color: map.get(v.$colors, 'light-bg');
+  margin-bottom: 20px;
+  font-family: v.$font-montserrat;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: map.get(v.$colors, 'light-bg');
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-family: v.$font-nunito;
+}
+
+.features {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Stats block styles */
+.statsBlock {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 6rem;
+  background-color: white;
+  border-radius: 20px;  
+  gap: 2rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: map-get(v.$colors, primary-500);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+}
+
+.subtext {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+.divider {
+  height: 40px;
+  width: 1px;
+  background-color: #e0e0e0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .serviceBlock {
     flex-direction: column;
+    gap: 40px;
+    padding: 32px;
+  }
+  
+  .features {
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+  }
+  
+  .statsBlock {
+    flex-direction: column;
+    padding: 1.5rem;
     gap: 1rem;
+  }
+  
+  .divider {
+    height: 1px;
+    width: 100%;
+  }
+  
+  .item {
+    width: 100%;
+    justify-content: center;
+  }
 }

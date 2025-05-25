@@ -1,11 +1,11 @@
 import "./App.css";
 import HowWeWork from "./components/HowWeWork";
-import Services from "./components/Services";
 import StartBlock from "./components/StartBlock";
 import WorkExperience from "./components/WorkExperience";
-import WorkExperienceCard from "./components/WorkExperienceCard";
 import FAQ from "./components/FAQ";
 import Reviews from "./components/Reviews";
+import Services from "./components/Services";
+import AboutUs from "./components/AboutUs";
 
  const mechanismsData = [
     {
@@ -30,11 +30,13 @@ function App() {
   return (
     <div className="app">
       <StartBlock/>
-    <Services/>
+    {/* <Services/> */}
     <HowWeWork/>
+    <AboutUs/>
     <WorkExperience/>
     <FAQ/>
     <Reviews/>
+
     </div>
   );
 }
