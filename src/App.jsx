@@ -6,6 +6,7 @@ import FAQ from "./components/FAQ";
 import Reviews from "./components/Reviews";
 import Services from "./components/Services";
 import AboutUs from "./components/AboutUs";
+import Contacts from "./components/Contacs";
 
  const mechanismsData = [
     {
@@ -36,6 +37,7 @@ function App() {
     <WorkExperience/>
     <FAQ/>
     <Reviews/>
+    <Contacts/>
 
     </div>
   );
