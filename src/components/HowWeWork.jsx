@@ -83,7 +83,7 @@ const RequestCard = ({
       {showButtons && (
         <div className={styles.buttons}>
           <a
-            href={LINKS.telegram.url}
+            href={LINKS.telegram.url + '&utm_medium=how_we_work'}
             target="_blank"
             rel="noopener noreferrer"
           >

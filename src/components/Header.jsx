@@ -61,7 +61,7 @@ export default function Header() {
       </nav>
 
       <div className={styles.right}>
-        <a href={LINKS.telegram.url} target="_blank" rel="noopener noreferrer">
+        <a href={LINKS.telegram.url + '&utm_medium=header'} target="_blank" rel="noopener noreferrer">
           <Button
             variant="icon"
             color="blue"

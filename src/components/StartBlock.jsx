@@ -74,7 +74,7 @@ const StartBlock = () => {
             </a>
 
             <a
-              href={LINKS.telegram.url}
+              href={LINKS.telegram.url + '&utm_medium=startblock'}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.telegramButton}

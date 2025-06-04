@@ -80,7 +80,7 @@ const ContactsBlock = () => {
               <strong>{telegramLabel}</strong>
               <br />
               <a 
-                href={LINKS.telegram.url} 
+                href={LINKS.telegram.url + '&utm_medium=contacts'} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={styles.telegramLink}

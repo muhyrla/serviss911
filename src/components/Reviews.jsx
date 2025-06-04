@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Reviews.module.scss';
 import BlockHeader from './BlockHeader';
 import { useDragScroll } from '../hooks/useDragScroll';
@@ -13,6 +13,8 @@ import starIcon from '../assets/icons/star.svg';
 
 const Reviews = () => {
   const dragRef = useDragScroll();
+  const [selectedImages, setSelectedImages] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const reviewPhotos = {
     1: photo1,
@@ -29,6 +31,54 @@ const Reviews = () => {
       ))}
     </div>
   );
+
+  const handleImageClick = (images, index) => {
+    setSelectedImages(images);
+    setCurrentImageIndex(index);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedImages(null);
+    setCurrentImageIndex(0);
+  };
+
+  const handlePrevImage = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev === 0 ? selectedImages.length - 1 : prev - 1));
+  };
+
+  const handleNextImage = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev === selectedImages.length - 1 ? 0 : prev + 1));
+  };
+
+  const renderGallery = (review) => {
+    if (!review.photos || review.photos.length === 0) return null;
+
+    return (
+      <div className={styles.galleryContainer}>
+        {review.photos.slice(0, 2).map((photo, index) => (
+          <div 
+            key={index} 
+            className={styles.galleryItem}
+            onClick={() => handleImageClick(review.photos, index)}
+          >
+            <img
+              src={photo}
+              alt={`Фото работы ${index + 1}`}
+              className={styles.galleryImage}
+              loading="lazy"
+            />
+            {review.photos.length > 2 && index === 1 && (
+              <div className={styles.morePhotos}>
+                +{review.photos.length - 2}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <section className={styles.reviewsSection} id="reviews">
@@ -50,10 +100,29 @@ const Reviews = () => {
             </div>
             <div className={styles.reviewContent}>
               <p className={styles.reviewText}>{review.text}</p>
+              {renderGallery(review)}
             </div>
           </div>
         ))}
       </div>
+
+      {selectedImages && (
+        <div className={styles.modal} onClick={handleCloseModal}>
+          <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
+            <button className={styles.closeButton} onClick={handleCloseModal}>×</button>
+            <button className={styles.navButton} onClick={handlePrevImage}>‹</button>
+            <img 
+              src={selectedImages[currentImageIndex]} 
+              alt={`Фото работы ${currentImageIndex + 1}`} 
+              className={styles.modalImage} 
+            />
+            <button className={styles.navButton} onClick={handleNextImage}>›</button>
+            <div className={styles.imageCounter}>
+              {currentImageIndex + 1} / {selectedImages.length}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
