@@ -6,8 +6,8 @@ export const LINKS = {
     tel: `tel:+78005554913`,
   },
   telegram: {
-    url: "https://t.me/zamkovbot?start=izhevsk",
+    url: "https://t.me/zamkovbot?start=saratov",
   },
-  yandexMapId: "3A238b64904d1851c1d4a4577daa6a3860c698afa89eb9103d9f2066af9361e3f2",
+  yandexMapId: "3Af85bcbf3c83ba6e683f71ce679a534277ed73419a524218f5464719747be98f9",
   yandexMetricaId: "101686254",
 };
