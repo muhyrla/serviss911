@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://omsk112.ru/sitemap.xml 
+Sitemap: https://krasnodar112.ru.ru/sitemap.xml 
