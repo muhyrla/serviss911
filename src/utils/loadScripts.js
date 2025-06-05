@@ -38,9 +38,8 @@ export const loadYandexMetrica = () => {
     trackHash:true,
     ecommerce:"dataLayer",
     params: {
-      city: "Кемерово",
-      region: "Удмуртская Республика",
-      domain: "kemerovo112.ru"
+      city: "Магнитогорск",
+      domain: "magnitogorsk112.ru"
     }
   });
 
