@@ -8,6 +8,6 @@ export const LINKS = {
   telegram: {
     url: "https://t.me/zamkovbot?start=nsk",
   },
-  yandexMapId: "3A6509a09bc10905f2e63dbfb3f01528d6ad0588afa6f8b2df6d1034d7286713ee",
+  yandexMapId: "3Ab3c64f9ed7c443066bcbd40a4845ff63e69fe683ea34e6494e993264ec3ced00",
   yandexMetricaId: "101686254",
 };

@@ -38,9 +38,9 @@ export const loadYandexMetrica = () => {
     trackHash:true,
     ecommerce:"dataLayer",
     params: {
-      city: "Новосибирск",
+      city: "Омск",
       region: "Удмуртская Республика",
-      domain: "zamok112.ru"
+      domain: "omsk112.ru"
     }
   });
 
