@@ -38,7 +38,7 @@ export const loadYandexMetrica = () => {
     trackHash:true,
     ecommerce:"dataLayer",
     params: {
-      city: "Ульяновск",
+      city: "Кемерово",
       region: "Удмуртская Республика",
       domain: "kemerovo112.ru"
     }
