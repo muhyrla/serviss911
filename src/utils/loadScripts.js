@@ -40,7 +40,7 @@ export const loadYandexMetrica = () => {
     params: {
       city: "Ульяновск",
       region: "Удмуртская Республика",
-      domain: "ylianovsk112.ru.ru"
+      domain: "voroneg112.ru.ru"
     }
   });
 
