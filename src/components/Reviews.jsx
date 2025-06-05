@@ -7,8 +7,8 @@ import { REVIEWS_TEXT } from '../texts';
 import photo1 from '../assets/img/reviews/1.webp';
 import photo2 from '../assets/img/reviews/2.webp';
 import photo3 from '../assets/img/reviews/3.webp';
-import photo4 from '../assets/img/reviews/5.webp';
-import photo5 from '../assets/img/reviews/4.webp';
+import photo4 from '../assets/img/reviews/4.webp';
+import photo5 from '../assets/img/reviews/5.webp';
 import starIcon from '../assets/icons/star.svg';
 
 const Reviews = () => {
