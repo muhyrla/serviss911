@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://kazan112.ru/sitemap.xml 
+Sitemap: https://novgorod112.ru/sitemap.xml 

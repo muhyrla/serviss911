@@ -38,8 +38,8 @@ export const loadYandexMetrica = () => {
     trackHash:true,
     ecommerce:"dataLayer",
     params: {
-      city: "Казань",
-      domain: "kazan112.ru"
+      city: "Новгород",
+      domain: "novgorod112.ru"
     }
   });
 
